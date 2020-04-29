@@ -136,11 +136,11 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_MICROSOCKS=y" >> .config  #microsocks，sock5代理
         echo "CONFIG_FIRMWARE_INCLUDE_SSSERVER=n" >> .config    #SS server，服务端
         echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=n" >> .config       #集成v2ray 执行文件
-        echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=n" >> .config    #集成trojan执行文件
+        echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=n" >> .config      #集成trojan执行文件
         #校园网相关
         echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=n" >> .config   #校园网相关 MentoHUST
         echo "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=n" >> .config   #校园网相关 SCUTCLIENT
-        echo "CONFIG_FIRMWARE_INCLUDE_MINIEAP=n" >> .config          #校园网相关 MiniEAP
+        echo "CONFIG_FIRMWARE_INCLUDE_MINIEAP=n" >> .config      #校园网相关 MiniEAP
         echo "CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT=n" >> .config  #校园网相关 NJIT_CLIENT
         echo "CONFIG_FIRMWARE_INCLUDE_GDUT_DRCOM=n" >> .config  #校园网相关 GDUT_DRCOM
         echo "CONFIG_FIRMWARE_INCLUDE_DOGCOM=n" >> .config      #校园网相关 DOGCOM
