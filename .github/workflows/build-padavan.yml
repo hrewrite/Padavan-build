@@ -136,7 +136,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_FRPC=n" >> .config     #内网穿透frpc
         echo "CONFIG_FIRMWARE_INCLUDE_FRPS=n" >> .config     #内网穿透frps
         echo "CONFIG_FIRMIMARE_INCLUDE_XUPNPD=n" >> .config  #XUPNPD TPTV0.3M
-        echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=y" >> .config #zerotier大小1.3M
+        echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=n" >> .config #zerotier大小1.3M
         #去广告
         echo "CONFIG_FIRMWARE_INCLUDE_IPT2SOCKS=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=y" >> .config      #广告过滤adbyby plus+
