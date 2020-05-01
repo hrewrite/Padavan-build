@@ -122,7 +122,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_HTOP=n" >> .config     #是Linux系统一个互动的进程查看器更加人性化。
         echo "CONFIG_FIRMWARE_INCLUDE_TTYD=y" >> .config     #基于浏览器的web shell工具（最好集成）
         echo "CONFIG_FIRMWARE_INCLUDE_NANO=n" >> .config     #nano是一个小型好用的文本编辑器
-        echo "CONFIG_FIRMWARE_INCLUDE_IPERF3=y" >> .config   #iperf3是一个网络速度测试工具,支持多协议
+        echo "CONFIG_FIRMWARE_INCLUDE_IPERF3=n" >> .config   #iperf3是一个网络速度测试工具,支持多协议
         echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=y" >> .config   #KMS激活服务器，（按需求集成）
         echo "CONFIG_FIRMWARE_INCLUDE_LRZSZ=n" >> .config    #lrzsz是一款在linux里可代替ftp上传和下载的程序
         echo "CONFIG_FIRMWARE_INCLUDE_MTR=n" >> .config      #MTR是一款非常好用的网络分析工具
@@ -144,7 +144,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=y" >> .config #广告过滤adguardhome
         #USB相关、下载软件
         echo "CONFIG_FIRMWARE_INCLUDE_TUNSAFE=n" >> .config
-        echo "CONFIG_FIRMWARE_INCLUDE_QOS=y" >> .config          ##Qos0.2MB
+        echo "CONFIG_FIRMWARE_INCLUDE_QOS=n" >> .config          ##Qos0.2MB
         echo "CONFIG_FIRMWARE_INCLUDE_SMBD=y" >> .config         #开启smaba和WINS服务
         echo "CONFIG_FIRMWARE_INCLUDE_SMBD36=y" >> .config     #升级samba3为smaba3.6
         echo "CONFIG_FIRMWARE_INCLUDE_FTPD=y" >> .config          #开启FTP服务器
