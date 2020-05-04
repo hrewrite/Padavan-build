@@ -111,6 +111,7 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_KUMASOCKS/d' .config           ### kumasocks，可以不集成
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SOCAT/d' .config               ### Socket CAT
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SRELAY/d' .config              ### srelay，可以不集成
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_RPL2TP/d' .config
         #电视棒
         sed -i '/CONFIG_FIRMWARE_INCLUDE_RTL_SDR/d' .config  ### RTL_SDR
         sed -i '/CONFIG_FIRMWARE_INCLUDE_DUMP1090/d' .config ### DUMP1090
@@ -179,6 +180,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_KUMASOCKS=n" >> .config     #kumasocks,可以不集成
         echo "CONFIG_FIRMWARE_INCLUDE_SOCAT=y" >> .config         #支持两个多协议相互通讯
         echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=n" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_RPL2TP=y" >> .config
         #USB电视棒服务
         echo "CONFIG_FIRMWARE_INCLUDE_RTL_SDR=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_DUMP1090=y" >> .config
