@@ -152,9 +152,9 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_CADDY=y" >> .config        #caddy，在线文件管理服务
         echo "CONFIG_FIRMWARE_INCLUDE_CADDYBIN=n" >> .config  #集成caddy执行文件13M,请注意固件大小
         echo "CONFIG_FIRMWARE_INCLUDE_TRANSMISSION=y" >> .config #transmission服务1.5MB
-        echo "CONFIG_FIRMWARE_INCLUDE_TRANSMISSION_WEB_CONTROL=y" >> .config  #transmission网页端0.8MB
+        echo "CONFIG_FIRMWARE_INCLUDE_TRANSMISSION_WEB_CONTROL=n" >> .config  #transmission网页端0.8MB
         echo "CONFIG_FIRMWARE_INCLUDE_ARIA=y" >> .config              #aria服务3.5MB
-        echo "CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL=y" >> .config  #aira网页端0.7MB
+        echo "CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL=n" >> .config  #aira网页端0.7MB
         #DNS加速服务
         echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNS=y" >> .config     #SmartDns服务
         echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNSBIN=y" >> .config  #SmartDns执行文件 
@@ -162,7 +162,7 @@ jobs:
         #科学上网
         echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=y" >> .config #SS plus+，客户端
         echo "CONFIG_FIRMWARE_INCLUDE_MICROSOCKS=y" >> .config  #microsocks，sock5代理
-        echo "CONFIG_FIRMWARE_INCLUDE_SSSERVER=y" >> .config    #SS server，服务端
+        echo "CONFIG_FIRMWARE_INCLUDE_SSSERVER=n" >> .config    #SS server，服务端
         echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=n" >> .config       #集成v2ray 执行文件
         echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=n" >> .config    #集成trojan执行文件
         #校园网相关
@@ -180,7 +180,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_KUMASOCKS=n" >> .config     #kumasocks,可以不集成
         echo "CONFIG_FIRMWARE_INCLUDE_SOCAT=n" >> .config         #支持两个多协议相互通讯
         echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=n" >> .config
-        echo "CONFIG_FIRMWARE_INCLUDE_RPL2TP=y" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_RPL2TP=n" >> .config
         #USB电视棒服务
         echo "CONFIG_FIRMWARE_INCLUDE_RTL_SDR=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_DUMP1090=y" >> .config
