@@ -119,7 +119,7 @@ jobs:
         ######################################################################
         #系统相关
         echo "CONFIG_FIRMWARE_INCLUDE_HTTPS=y" >> .config    #路由器https访问
-        echo "CONFIG_FIRMWARE_INCLUDE_CURL=n" >> .config     #利用URL语法在命令行与文件传输工具
+        echo "CONFIG_FIRMWARE_INCLUDE_CURL=y" >> .config     #利用URL语法在命令行与文件传输工具
         echo "CONFIG_FIRMWARE_INCLUDE_HTOP=n" >> .config     #是Linux系统一个互动的进程查看器更加人性化。
         echo "CONFIG_FIRMWARE_INCLUDE_TTYD=y" >> .config     #基于浏览器的web shell工具（最好集成）
         echo "CONFIG_FIRMWARE_INCLUDE_NANO=n" >> .config     #nano是一个小型好用的文本编辑器
@@ -136,7 +136,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=y" >> .config  #阿里DDNS
         echo "CONFIG_FIRMWARE_INCLUDE_FRPC=n" >> .config     #内网穿透frpc
         echo "CONFIG_FIRMWARE_INCLUDE_FRPS=n" >> .config     #内网穿透frps
-        echo "CONFIG_FIRMIMARE_INCLUDE_XUPNPD=y" >> .config  #XUPNPD TPTV0.3M
+        echo "CONFIG_FIRMIMARE_INCLUDE_XUPNPD=n" >> .config  #XUPNPD TPTV0.3M
         echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=n" >> .config #zerotier大小1.3M
         #去广告
         echo "CONFIG_FIRMWARE_INCLUDE_IPT2SOCKS=n" >> .config
@@ -180,7 +180,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_KUMASOCKS=n" >> .config     #kumasocks,可以不集成
         echo "CONFIG_FIRMWARE_INCLUDE_SOCAT=n" >> .config         #支持两个多协议相互通讯
         echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=n" >> .config
-        echo "CONFIG_FIRMWARE_INCLUDE_RPL2TP=y" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_RPL2TP=n" >> .config
         #USB电视棒服务
         echo "CONFIG_FIRMWARE_INCLUDE_RTL_SDR=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_DUMP1090=y" >> .config
