@@ -148,7 +148,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_QOS=n" >> .config          ##Qos0.2MB
         echo "CONFIG_FIRMWARE_INCLUDE_SMBD=y" >> .config         #开启smaba和WINS服务
         echo "CONFIG_FIRMWARE_INCLUDE_SMBD36=y" >> .config     #升级samba3为smaba3.6
-        echo "CONFIG_FIRMWARE_INCLUDE_FTPD=y" >> .config          #开启FTP服务器
+        echo "CONFIG_FIRMWARE_INCLUDE_FTPD=y" >> .config         #开启FTP服务器
         echo "CONFIG_FIRMWARE_INCLUDE_CADDY=y" >> .config        #caddy，在线文件管理服务
         echo "CONFIG_FIRMWARE_INCLUDE_CADDYBIN=n" >> .config  #集成caddy执行文件13M,请注意固件大小
         echo "CONFIG_FIRMWARE_INCLUDE_TRANSMISSION=y" >> .config #transmission服务1.5MB
