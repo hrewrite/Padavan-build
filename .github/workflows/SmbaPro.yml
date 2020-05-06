@@ -152,7 +152,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_CADDY=y" >> .config        #caddy，在线文件管理服务
         echo "CONFIG_FIRMWARE_INCLUDE_CADDYBIN=n" >> .config  #集成caddy执行文件13M,请注意固件大小
         echo "CONFIG_FIRMWARE_INCLUDE_TRANSMISSION=y" >> .config #transmission服务1.5MB
-        echo "CONFIG_FIRMWARE_INCLUDE_TRANSMISSION_WEB_CONTROL=n" >> .config  #transmission网页端0.8MB
+        echo "CONFIG_FIRMWARE_INCLUDE_TRANSMISSION_WEB_CONTROL=y" >> .config  #transmission网页端0.8MB
         echo "CONFIG_FIRMWARE_INCLUDE_ARIA=n" >> .config              #aria服务3.5MB
         echo "CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL=n" >> .config  #aira网页端0.7MB
         #DNS加速服务
