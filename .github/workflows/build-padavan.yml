@@ -53,32 +53,32 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_CURL/d' .config     ### 利用URL语法在命令行下工作的文件传输工具
         sed -i '/CONFIG_FIRMWARE_INCLUDE_HTOP/d' .config     ### HTOP 类top进程查看工具
         sed -i '/CONFIG_FIRMWARE_INCLUDE_TTYD/d' .config     ### 浏览器的web shell工具
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_NANO/d' .config    ### NANO 文本编辑小工具
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_NANO/d' .config     ### NANO 文本编辑小工具
         sed -i '/CONFIG_FIRMWARE_INCLUDE_IPERF3/d' .config   ### IPERF3 测速工具
         sed -i '/CONFIG_FIRMWARE_INCLUDE_VLMCSD/d' .config   ### VLMCSD（KMS激活服务器）
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_LRZSZ/d' .config      ### LRZSZ，linux系统中类FTP的软件。
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_MTR/d' .config         ### MTR，网络分析工具。
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_LRZSZ/d' .config    ### LRZSZ，linux系统中类FTP的软件。
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_MTR/d' .config      ### MTR，网络分析工具。
         sed -i '/CONFIG_FIRMWARE_INCLUDE_NAPT66/d' .config   ### NAPT66是北邮学生开发的
         sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE/d' .config ### openssl_exe 自动生成证书服务
         ###网易云音乐
         sed -i '/CONFIG_FIRMWARE_INCLUDE_WYY/d' .config      ###网易云解锁
         sed -i '/CONFIG_FIRMWARE_INCLUDE_WYYBIN/d' .config   ###网易云解锁GO版本执行文
         ###穿透服务
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_ALIDDNS/d' .config  ### 阿里DDNS
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_ALIDDNS/d' .config    ### 阿里DDNS
         sed -i '/CONFIG_FIRMWARE_INCLUDE_FRPC/d' .config       ### 内网穿透FRPC
         sed -i '/CONFIG_FIRMWARE_INCLUDE_FRPS/d' .config       ### 内网穿透FRPS
-        sed -i '/CONFIG_FIRMIMARE_INCLUDE_XUPNPD/d' .config     ### TPTV
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_ZEROTIER/d' .config    ###删除配置项ZEROTIER
+        sed -i '/CONFIG_FIRMIMARE_INCLUDE_XUPNPD/d' .config    ### TPTV
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_ZEROTIER/d' .config   ###删除配置项ZEROTIER
         ###去广告
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_IPT2SOCKS/d' .config     ### TPT2SOCKS
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_ADBYBY/d' .config           ### 广告过滤，adbyby plus+
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_IPT2SOCKS/d' .config   ### TPT2SOCKS
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_ADBYBY/d' .config      ### 广告过滤，adbyby plus+
         sed -i '/CONFIG_FIRMWARE_INCLUDE_KOOLPROXY/d' .config   ### 广告过滤，koolproxy
         sed -i '/CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME/d' .config ### 广告过滤，adguardhome
         #USB相关、下载软件
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_TUNSAFE/d' .config           ### TUNSAFE
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_TUNSAFE/d' .config         ### TUNSAFE
         sed -i '/CONFIG_FIRMWARE_INCLUDE_QOS/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SMBD/d' .config            ### smaba和WINS服务
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_SMBD36/d' .config        ### 升级samba3为smaba3.6
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_SMBD36/d' .config          ### 升级samba3为smaba3.6
         sed -i '/CONFIG_FIRMWARE_INCLUDE_FTPD/d' .config            ### FTP服务器
         sed -i '/CONFIG_FIRMWARE_INCLUDE_CADDY/d' .config           ### 在线文件管理服务
         sed -i '/CONFIG_FIRMWARE_INCLUDE_CADDYBIN/d' .config        ### 集成caddy执行文件
@@ -112,6 +112,11 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SOCAT/d' .config               ### Socket CAT
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SRELAY/d' .config              ### srelay，可以不集成
         sed -i '/CONFIG_FIRMWARE_INCLUDE_RPL2TP/d' .config
+        #附加模块
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_HID/d' .config #USB-硬盘模块
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_CIFS/d' .config #CIFS(SMB)客户
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_U2EC/d' .config #USB以太网打印机守护进程
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_DROPBEAR_FAST_CODE/d' .config #使Dropbear对称密码和散列更快
         #电视棒
         sed -i '/CONFIG_FIRMWARE_INCLUDE_RTL_SDR/d' .config  ### RTL_SDR
         sed -i '/CONFIG_FIRMWARE_INCLUDE_DUMP1090/d' .config ### DUMP1090
@@ -123,7 +128,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_HTOP=n" >> .config     #是Linux系统一个互动的进程查看器更加人性化。
         echo "CONFIG_FIRMWARE_INCLUDE_TTYD=y" >> .config     #基于浏览器的web shell工具（最好集成）
         echo "CONFIG_FIRMWARE_INCLUDE_NANO=n" >> .config     #nano是一个小型好用的文本编辑器
-        echo "CONFIG_FIRMWARE_INCLUDE_IPERF3=y" >> .config   #iperf3是一个网络速度测试工具,支持多协议
+        echo "CONFIG_FIRMWARE_INCLUDE_IPERF3=n" >> .config   #iperf3是一个网络速度测试工具,支持多协议
         echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=y" >> .config   #KMS激活服务器，（按需求集成）
         echo "CONFIG_FIRMWARE_INCLUDE_LRZSZ=y" >> .config    #lrzsz是一款在linux里可代替ftp上传和下载的程序
         echo "CONFIG_FIRMWARE_INCLUDE_MTR=n" >> .config      #MTR是一款非常好用的网络分析工具
@@ -145,12 +150,12 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=y" >> .config #广告过滤adguardhome
         #USB相关、下载软件
         echo "CONFIG_FIRMWARE_INCLUDE_TUNSAFE=n" >> .config
-        echo "CONFIG_FIRMWARE_INCLUDE_QOS=y" >> .config          ##Qos0.2MB
-        echo "CONFIG_FIRMWARE_INCLUDE_SMBD=y" >> .config         #开启smaba和WINS服务
+        echo "CONFIG_FIRMWARE_INCLUDE_QOS=y" >> .config        ##Qos0.2MB
+        echo "CONFIG_FIRMWARE_INCLUDE_SMBD=y" >> .config       #开启smaba和WINS服务
         echo "CONFIG_FIRMWARE_INCLUDE_SMBD36=y" >> .config     #升级samba3为smaba3.6
-        echo "CONFIG_FIRMWARE_INCLUDE_FTPD=y" >> .config         #开启FTP服务器
-        echo "CONFIG_FIRMWARE_INCLUDE_CADDY=y" >> .config        #caddy，在线文件管理服务
-        echo "CONFIG_FIRMWARE_INCLUDE_CADDYBIN=n" >> .config  #集成caddy执行文件13M,请注意固件大小
+        echo "CONFIG_FIRMWARE_INCLUDE_FTPD=y" >> .config       #开启FTP服务器
+        echo "CONFIG_FIRMWARE_INCLUDE_CADDY=y" >> .config      #caddy，在线文件管理服务
+        echo "CONFIG_FIRMWARE_INCLUDE_CADDYBIN=n" >> .config   #集成caddy执行文件13M,请注意固件大小
         echo "CONFIG_FIRMWARE_INCLUDE_TRANSMISSION=y" >> .config #transmission服务1.5MB
         echo "CONFIG_FIRMWARE_INCLUDE_TRANSMISSION_WEB_CONTROL=y" >> .config  #transmission网页端0.8MB
         echo "CONFIG_FIRMWARE_INCLUDE_ARIA=n" >> .config              #aria服务3.5MB
@@ -164,12 +169,12 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_MICROSOCKS=y" >> .config  #microsocks，sock5代理
         echo "CONFIG_FIRMWARE_INCLUDE_SSSERVER=n" >> .config    #SS server，服务端
         echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=n" >> .config       #集成v2ray 执行文件
-        echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=n" >> .config    #集成trojan执行文件
+        echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=n" >> .config      #集成trojan执行文件
         #校园网相关
         echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=n" >> .config   #校园网相关 MentoHUST
-        echo "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=n" >> .config   #校园网相关 SCUTCLIENT
-        echo "CONFIG_FIRMWARE_INCLUDE_MINIEAP=n" >> .config          #校园网相关 MiniEAP
-        echo "CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT=n" >> .config  #校园网相关 NJIT_CLIENT
+        echo "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=n" >> .config  #校园网相关 SCUTCLIENT
+        echo "CONFIG_FIRMWARE_INCLUDE_MINIEAP=n" >> .config     #校园网相关 MiniEAP
+        echo "CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT=n" >> .config #校园网相关 NJIT_CLIENT
         echo "CONFIG_FIRMWARE_INCLUDE_GDUT_DRCOM=n" >> .config  #校园网相关 GDUT_DRCOM
         echo "CONFIG_FIRMWARE_INCLUDE_DOGCOM=n" >> .config      #校园网相关 DOGCOM
         #其他服务
@@ -181,6 +186,11 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_SOCAT=n" >> .config         #支持两个多协议相互通讯
         echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_RPL2TP=y" >> .config
+        #附加模块
+        echo "CONFIG_FIRMWARE_INCLUDE_HID=y" >> .config  #包括USB-硬盘模块~0.2MB
+        echo "CONFIG_FIRMWARE_INCLUDE_CIFS=y" >> .config #包括CIFS(SMB)客户进程守护~0.2MB
+        echo "CONFIG_FIRMWARE_INCLUDE_U2EC=y" >> .config #包括USB以太网打印机守护进程~0.05MB
+        echo "CONFIG_FIRMWARE_INCLUDE_DROPBEAR_FAST_CODE=y" >> .config #使Dropbear对称密码和散列更快 ~0.06mb
         #USB电视棒服务
         echo "CONFIG_FIRMWARE_INCLUDE_RTL_SDR=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_DUMP1090=y" >> .config
