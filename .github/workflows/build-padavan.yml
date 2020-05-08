@@ -125,7 +125,7 @@ jobs:
         #系统相关
         echo "CONFIG_FIRMWARE_INCLUDE_HTTPS=y" >> .config    #路由器https访问
         echo "CONFIG_FIRMWARE_INCLUDE_CURL=y" >> .config     #利用URL语法在命令行与文件传输工具
-        echo "CONFIG_FIRMWARE_INCLUDE_HTOP=n" >> .config     #是Linux系统一个互动的进程查看器更加人性化。
+        echo "CONFIG_FIRMWARE_INCLUDE_HTOP=y" >> .config     #是Linux系统一个互动的进程查看器更加人性化。
         echo "CONFIG_FIRMWARE_INCLUDE_TTYD=y" >> .config     #基于浏览器的web shell工具（最好集成）
         echo "CONFIG_FIRMWARE_INCLUDE_NANO=n" >> .config     #nano是一个小型好用的文本编辑器
         echo "CONFIG_FIRMWARE_INCLUDE_IPERF3=n" >> .config   #iperf3是一个网络速度测试工具,支持多协议
