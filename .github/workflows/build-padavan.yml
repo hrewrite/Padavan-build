@@ -32,7 +32,7 @@ jobs:
         pkg-config zlib1g-dev libgmp3-dev libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev gcc-multilib
     - name: Clone source code
       run: |
-        git clone --depth=1 https://github.com/chongshengB/rt-n56u.git /opt/rt-n56u
+        git clone --depth=1 https://github.com/SuperMTNC/rt-n56u.git /opt/rt-n56u
         cd /opt/rt-n56u/toolchain-mipsel
         sh dl_toolchain.sh
         mkdir -p /opt/images/
@@ -182,7 +182,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CLIENT=n" >> .config #softethervpn_client，不需要集成
         echo "CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CMD=n" >> .config    #softethervpn_cmd，不需要集成
         echo "CONFIG_FIRMWARE_INCLUDE_TUNSAFE=n" >> .config             #tunsafe vpn，不需要集成
-        echo "CONFIG_FIRMWARE_INCLUDE_KUMASOCKS=y" >> .config     #kumasocks,可以不集成
+        echo "CONFIG_FIRMWARE_INCLUDE_KUMASOCKS=n" >> .config     #kumasocks,可以不集成
         echo "CONFIG_FIRMWARE_INCLUDE_SOCAT=y" >> .config         #支持两个多协议相互通讯
         echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_RPL2TP=y" >> .config
