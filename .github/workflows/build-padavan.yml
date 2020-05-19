@@ -184,10 +184,10 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_TUNSAFE=n" >> .config             #tunsafe vpn，不需要集成
         echo "CONFIG_FIRMWARE_INCLUDE_KUMASOCKS=n" >> .config     #kumasocks,可以不集成
         echo "CONFIG_FIRMWARE_INCLUDE_SOCAT=y" >> .config         #支持两个多协议相互通讯
-        echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=y" >> .config
-        echo "CONFIG_FIRMWARE_INCLUDE_RPL2TP=y" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=n" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_RPL2TP=n" >> .config
         #附加模块
-        echo "CONFIG_FIRMWARE_INCLUDE_HID=n" >> .config   #包括USB-硬盘模块~0.2MB
+        echo "CONFIG_FIRMWARE_INCLUDE_HID=y" >> .config   #包括USB-硬盘模块~0.2MB
         echo "CONFIG_FIRMWARE_INCLUDE_CIFS=y" >> .config  #包括CIFS(SMB)客户进程守护~0.2MB
         echo "CONFIG_FIRMWARE_INCLUDE_U2EC=y" >> .config  #包括USB以太网打印机守护进程~0.05MB
         echo "CONFIG_FIRMWARE_INCLUDE_WINS=y" >> .config  #只包含WINS服务器~0.4mb
