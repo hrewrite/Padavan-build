@@ -148,7 +148,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_IPT2SOCKS=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=y" >> .config      #广告过滤adbyby plus+
         echo "CONFIG_FIRMWARE_INCLUDE_KOOLPROXY=y" >> .config   #广告过滤koolproxy
-        echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=y" >> .config #广告过滤adguardhome
+        echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=n" >> .config #广告过滤adguardhome
         #USB相关、下载软件
         echo "CONFIG_FIRMWARE_INCLUDE_QOS=y" >> .config        ##QOS~0.2MB
         echo "CONFIG_FIRMWARE_INCLUDE_SMBD=y" >> .config       #开启smaba和WINS服务
@@ -168,8 +168,8 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=y" >> .config #SS plus+，客户端
         echo "CONFIG_FIRMWARE_INCLUDE_MICROSOCKS=y" >> .config  #microsocks，sock5代理
         echo "CONFIG_FIRMWARE_INCLUDE_SSSERVER=n" >> .config    #SS server，服务端
-        echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=n" >> .config       #集成v2ray 执行文件
-        echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=n" >> .config      #集成trojan执行文件
+        echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=y" >> .config       #集成v2ray 执行文件
+        echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=y" >> .config      #集成trojan执行文件
         #校园网相关
         echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=n" >> .config   #校园网相关 MentoHUST
         echo "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=n" >> .config  #校园网相关 SCUTCLIENT
