@@ -136,13 +136,13 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_NAPT66=y" >> .config   #napt66是北邮学生开发支持较旧内核的Linux支持TPV6
         echo "CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=y" >> .config #openssl_exe 自动生成证书服务
         #网易云音乐
-        echo "CONFIG_FIRMWARE_INCLUDE_WYY=y" >> .config      #网易云解锁
+        echo "CONFIG_FIRMWARE_INCLUDE_WYY=n" >> .config      #网易云解锁
         echo "CONFIG_FIRMWARE_INCLUDE_WYYBIN=n" >> .config   #网易云解锁GO版本执行文件（4M多）不集成会自动下载
         #穿透服务
-        echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=y" >> .config  #阿里DDNS
+        echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=n" >> .config  #阿里DDNS
         echo "CONFIG_FIRMWARE_INCLUDE_FRPC=n" >> .config     #内网穿透frpc
         echo "CONFIG_FIRMWARE_INCLUDE_FRPS=n" >> .config     #内网穿透frps
-        echo "CONFIG_FIRMIMARE_INCLUDE_XUPNPD=y" >> .config  #XUPNPD TPTV0.3M
+        echo "CONFIG_FIRMIMARE_INCLUDE_XUPNPD=n" >> .config  #XUPNPD TPTV0.3M
         echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=y" >> .config #zerotier大小1.3M
         #去广告
         echo "CONFIG_FIRMWARE_INCLUDE_IPT2SOCKS=n" >> .config
@@ -166,10 +166,10 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER=n" >> .config #dns forwarder
         #科学上网
         echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=y" >> .config #SS plus+，客户端
-        echo "CONFIG_FIRMWARE_INCLUDE_MICROSOCKS=n" >> .config  #microsocks，sock5代理
+        echo "CONFIG_FIRMWARE_INCLUDE_MICROSOCKS=y" >> .config  #microsocks，sock5代理
         echo "CONFIG_FIRMWARE_INCLUDE_SSSERVER=n" >> .config    #SS server，服务端
         echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=y" >> .config       #集成v2ray 执行文件
-        echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=n" >> .config      #集成trojan执行文件
+        echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=y" >> .config      #集成trojan执行文件
         #校园网相关
         echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=n" >> .config   #校园网相关 MentoHUST
         echo "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=n" >> .config  #校园网相关 SCUTCLIENT
