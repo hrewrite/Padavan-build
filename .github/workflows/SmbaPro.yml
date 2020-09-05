@@ -140,9 +140,9 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_WYYBIN=n" >> .config   #网易云解锁GO版本执行文件（4M多）不集成会自动下载
         #穿透服务
         echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=y" >> .config  #阿里DDNS
-        echo "CONFIG_FIRMWARE_INCLUDE_FRPC=y" >> .config     #内网穿透frpc
+        echo "CONFIG_FIRMWARE_INCLUDE_FRPC=n" >> .config     #内网穿透frpc
         echo "CONFIG_FIRMWARE_INCLUDE_FRPS=n" >> .config     #内网穿透frps
-        echo "CONFIG_FIRMIMARE_INCLUDE_XUPNPD=n" >> .config  #XUPNPD TPTV0.3M
+        echo "CONFIG_FIRMIMARE_INCLUDE_XUPNPD=y" >> .config  #XUPNPD TPTV0.3M
         echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=y" >> .config #zerotier大小1.3M
         #去广告
         echo "CONFIG_FIRMWARE_INCLUDE_IPT2SOCKS=n" >> .config
@@ -167,7 +167,7 @@ jobs:
         #科学上网
         echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=y" >> .config #SS plus+，客户端
         echo "CONFIG_FIRMWARE_INCLUDE_MICROSOCKS=y" >> .config  #microsocks，sock5代理
-        echo "CONFIG_FIRMWARE_INCLUDE_SSSERVER=y" >> .config    #SS server，服务端
+        echo "CONFIG_FIRMWARE_INCLUDE_SSSERVER=n" >> .config    #SS server，服务端
         echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=n" >> .config       #集成v2ray 执行文件
         echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=n" >> .config      #集成trojan执行文件
         #校园网相关
