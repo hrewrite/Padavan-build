@@ -191,8 +191,8 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_CIFS=y" >> .config  #包括CIFS(SMB)客户进程守护~0.2MB
         echo "CONFIG_FIRMWARE_INCLUDE_U2EC=y" >> .config  #包括USB以太网打印机守护进程~0.05MB
         echo "CONFIG_FIRMWARE_INCLUDE_WINS=y" >> .config  #只包含WINS服务器~0.4mb
-        echo "CONFIG_FIRMWARE_INCLUDE_SMBD_SYSLOG=y" >> .config   #用于SMB和WINS服务器的ncludesyslog ~0.3MB
-        echo "CONFIG_FIRMWARE_INCLUDE_DROPBEAR_FAST_CODE=n" >> .config #使Dropbear对称密码和散列更快 ~0.06mb
+        echo "CONFIG_FIRMWARE_INCLUDE_SMBD_SYSLOG=y" >> .config   #用于SMB和WINS服务器的ncludesyslog~0.3MB
+        echo "CONFIG_FIRMWARE_INCLUDE_DROPBEAR_FAST_CODE=n" >> .config #使Dropbear对称密码和散列更快~0.06mb
         #USB电视棒服务
         echo "CONFIG_FIRMWARE_INCLUDE_RTL_SDR=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_DUMP1090=y" >> .config
