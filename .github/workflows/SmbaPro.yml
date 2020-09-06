@@ -125,7 +125,7 @@ jobs:
         #################################-超频版-#####################################
         #系统相关
         echo "CONFIG_FIRMWARE_INCLUDE_HTTPS=y" >> .config    #路由器https访问
-        echo "CONFIG_FIRMWARE_INCLUDE_CURL=n" >> .config     #利用URL语法在命令行与文件传输工具
+        echo "CONFIG_FIRMWARE_INCLUDE_CURL=y" >> .config     #利用URL语法在命令行与文件传输工具
         echo "CONFIG_FIRMWARE_INCLUDE_HTOP=n" >> .config     #是Linux系统一个互动的进程查看器更加人性化。
         echo "CONFIG_FIRMWARE_INCLUDE_TTYD=y" >> .config     #基于浏览器的web shell工具（最好集成）
         echo "CONFIG_FIRMWARE_INCLUDE_NANO=n" >> .config     #nano是一个小型好用的文本编辑器
@@ -184,7 +184,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_TUNSAFE=n" >> .config             #tunsafe vpn，不需要集成
         echo "CONFIG_FIRMWARE_INCLUDE_KUMASOCKS=n" >> .config     #kumasocks,可以不集成
         echo "CONFIG_FIRMWARE_INCLUDE_SOCAT=y" >> .config         #支持两个多协议相互通讯
-        echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=n" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_RPL2TP=n" >> .config
         #附加模块
         echo "CONFIG_FIRMWARE_INCLUDE_HID=y" >> .config     #包括USB-硬盘模块~0.2MB
@@ -194,7 +194,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_SMBD_SYSLOG=y" >> .config  #用于SMB和WINS服务器的ncludesyslog ~0.3MB
         echo "CONFIG_FIRMWARE_INCLUDE_DROPBEAR_FAST_CODE=n" >> .config #使Dropbear对称密码和散列更快~0.06mb
         #USB电视棒服务
-        echo "CONFIG_FIRMWARE_INCLUDE_RTL_SDR=y" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_RTL_SDR=y" >> .config #电视棒服务
         echo "CONFIG_FIRMWARE_INCLUDE_DUMP1090=y" >> .config
         #################################################################
         sudo ./clear_tree
