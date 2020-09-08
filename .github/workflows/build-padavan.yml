@@ -142,7 +142,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=y" >> .config  #阿里DDNS
         echo "CONFIG_FIRMWARE_INCLUDE_FRPC=n" >> .config     #内网穿透frpc
         echo "CONFIG_FIRMWARE_INCLUDE_FRPS=n" >> .config     #内网穿透frps
-        echo "CONFIG_FIRMIMARE_INCLUDE_XUPNPD=n" >> .config  #XUPNPD TPTV0.3M
+        echo "CONFIG_FIRMIMARE_INCLUDE_XUPNPD=y" >> .config  #XUPNPD TPTV0.3M
         echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=y" >> .config #zerotier大小1.3M
         #去广告
         echo "CONFIG_FIRMWARE_INCLUDE_IPT2SOCKS=n" >> .config
@@ -150,7 +150,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_KOOLPROXY=y" >> .config   #广告过滤koolproxy
         echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=y" >> .config #广告过滤adguardhome
         #USB相关、下载软件
-        echo "CONFIG_FIRMWARE_INCLUDE_QOS=n" >> .config        ##QOS~0.2MB
+        echo "CONFIG_FIRMWARE_INCLUDE_QOS=y" >> .config        ##QOS~0.2MB
         echo "CONFIG_FIRMWARE_INCLUDE_SMBD=y" >> .config       #开启smaba和WINS服务
         echo "CONFIG_FIRMWARE_INCLUDE_SMBD36=y" >> .config     #升级samba3为smaba3.6
         echo "CONFIG_FIRMWARE_INCLUDE_FTPD=y" >> .config       #开启FTP服务器
@@ -162,7 +162,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL=n" >> .config  #aira网页端0.7MB
         #DNS加速服务
         echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNS=y" >> .config     #SmartDns服务
-        echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNSBIN=n" >> .config  #SmartDns执行文件 
+        echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNSBIN=y" >> .config  #SmartDns执行文件 
         echo "CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER=n" >> .config #dns forwarder
         #科学上网
         echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=y" >> .config #SS plus+，客户端
@@ -184,7 +184,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_TUNSAFE=n" >> .config             #tunsafe vpn，不需要集成
         echo "CONFIG_FIRMWARE_INCLUDE_KUMASOCKS=n" >> .config     #kumasocks,可以不集成
         echo "CONFIG_FIRMWARE_INCLUDE_SOCAT=y" >> .config         #支持两个多协议相互通讯
-        echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=n" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_RPL2TP=n" >> .config
         #附加模块
         echo "CONFIG_FIRMWARE_INCLUDE_HID=y" >> .config   #包括USB-硬盘模块~0.2MB
