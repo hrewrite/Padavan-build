@@ -141,7 +141,7 @@ jobs:
         #穿透服务
         echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=y" >> .config  #阿里DDNS
         echo "CONFIG_FIRMWARE_INCLUDE_FRPC=y" >> .config     #内网穿透frpc
-        echo "CONFIG_FIRMWARE_INCLUDE_FRPS=y" >> .config     #内网穿透frps
+        echo "CONFIG_FIRMWARE_INCLUDE_FRPS=n" >> .config     #内网穿透frps
         echo "CONFIG_FIRMIMARE_INCLUDE_XUPNPD=n" >> .config  #XUPNPD TPTV0.3M
         echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=y" >> .config #zerotier大小1.3M
         #去广告
