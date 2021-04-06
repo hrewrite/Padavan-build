@@ -1,5 +1,5 @@
 #修改TNAME: K2P-5.0 为你需要编译的型号，注意名称要与configs/templates/目录下的名字相同
-name: Build Padavan
+name: K2P-5.0
 
 on: 
   release:
@@ -136,7 +136,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_NAPT66=n" >> .config   #napt66是北邮学生开发TPV6支持较旧内核的Linux
         echo "CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=y" >> .config #openssl_exe 自动生成证书服务
         #网易云音乐
-        echo "CONFIG_FIRMWARE_INCLUDE_WYY=y" >> .config      #网易云解锁
+        echo "CONFIG_FIRMWARE_INCLUDE_WYY=n" >> .config      #网易云解锁
         echo "CONFIG_FIRMWARE_INCLUDE_WYYBIN=n" >> .config   #网易云解锁GO版本执行文件（4M多）不集成会自动下载
         #穿透服务
         echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=y" >> .config  #阿里DDNS
@@ -145,10 +145,10 @@ jobs:
         echo "CONFIG_FIRMIMARE_INCLUDE_XUPNPD=n" >> .config  #XUPNPD TPTV0.3M
         echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=y" >> .config #zerotier大小1.3M
         #去广告
-        echo "CONFIG_FIRMWARE_INCLUDE_IPT2SOCKS=y" >> .config
-        echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=y" >> .config      #广告过滤adbyby plus+
-        echo "CONFIG_FIRMWARE_INCLUDE_KOOLPROXY=y" >> .config   #广告过滤koolproxy
-        echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=y" >> .config #广告过滤adguardhome
+        echo "CONFIG_FIRMWARE_INCLUDE_IPT2SOCKS=n" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=n" >> .config      #广告过滤adbyby plus+
+        echo "CONFIG_FIRMWARE_INCLUDE_KOOLPROXY=n" >> .config   #广告过滤koolproxy
+        echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=n" >> .config #广告过滤adguardhome
         #USB相关、下载软件
         echo "CONFIG_FIRMWARE_INCLUDE_QOS=y" >> .config        ##QOS~0.2MB
         echo "CONFIG_FIRMWARE_INCLUDE_SMBD=n" >> .config       #开启smaba和WINS服务
@@ -167,8 +167,8 @@ jobs:
         #科学上网
         echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=y" >> .config #SS plus+，客户端
         echo "CONFIG_FIRMWARE_INCLUDE_MICROSOCKS=y" >> .config  #microsocks，sock5代理
-        echo "CONFIG_FIRMWARE_INCLUDE_SSSERVER=y" >> .config    #SS server，服务端
-        echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=n" >> .config       #集成v2ray 执行文件
+        echo "CONFIG_FIRMWARE_INCLUDE_SSSERVER=n" >> .config    #SS server，服务端
+        echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=y" >> .config       #集成v2ray 执行文件
         echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=n" >> .config      #集成trojan执行文件
         #校园网相关
         echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=n" >> .config   #校园网相关 MentoHUST
@@ -194,8 +194,8 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_SMBD_SYSLOG=n" >> .config   #用于SMB和WINS服务器的ncludesyslog~0.3MB
         echo "CONFIG_FIRMWARE_INCLUDE_DROPBEAR_FAST_CODE=n" >> .config #使Dropbear对称密码和散列更快~0.06mb
         #USB电视棒服务
-        echo "CONFIG_FIRMWARE_INCLUDE_RTL_SDR=y" >> .config
-        echo "CONFIG_FIRMWARE_INCLUDE_DUMP1090=y" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_RTL_SDR=n" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_DUMP1090=n" >> .config
         #################################################################
         sudo ./clear_tree
         sudo ./build_firmware_modify $TNAME 0
